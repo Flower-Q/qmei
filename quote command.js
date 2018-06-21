@@ -1,5 +1,5 @@
 MatchRule({
-            end_with_keyword: 'quote',
+            end_with_keyword: 'quote mei',
             default_reply: 
 	
 	    var quoteSource=[
