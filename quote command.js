@@ -1,6 +1,6 @@
 MatchRule({
             end_with_keyword: 'quote mei',
-            default_reply: 
+            default_reply: quote
 	
 	    var quoteSource=[
 	    {
