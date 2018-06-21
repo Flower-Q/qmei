@@ -20,7 +20,7 @@
             reply_to_user: {
                 'not mei': 'Operating at 4.02% efficiency',
             },
-            default_reply: 'has no eyebrows!'
+            default_reply: null
         }),
 
         MatchRule({
@@ -28,7 +28,7 @@
             reply_to_user: {
                 'Cargo': 'mei will poke your eye with a carrot!',
             },
-            default_reply: 'mei will bite you!'
+            default_reply: null
         }),
         
         //this is working, media player provided by site
