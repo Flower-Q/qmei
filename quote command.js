@@ -1,6 +1,8 @@
-MatchRule({
-            end_with_keyword: 'quote mei',
-            default_reply: quote
+      
+      MatchRule({
+            include_keyword: 'quote',
+            default_reply: '<some code to write output from random quote selector>'
+        })
 	
 	    var quoteSource=[
 	    {
