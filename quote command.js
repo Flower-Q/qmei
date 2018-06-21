@@ -1,9 +1,11 @@
 MatchRule({
             end_with_keyword: 'quote',
-            default_reply: var quoteSource=[
-		{
-			quote: "Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.",
-			name:"Francis of Assisi"
+            default_reply: 
+	
+	    var quoteSource=[
+	    {
+		quote: "Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.",
+		name:"Francis of Assisi"
 	    },
 	    {
 	    	quote:"Believe you can and you're halfway there.",
