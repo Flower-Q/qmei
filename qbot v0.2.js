@@ -18,7 +18,7 @@
         MatchRule({
             include_keyword: 'hello',
             reply_to_user: {
-                '鳴 「Mei」': '<say hello to Mei>',
+                '鳴 「Mei」': 'Operating at 4.02% efficiency',
             },
             default_reply: 'has no eyebrows!'
         }),
