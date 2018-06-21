@@ -77,6 +77,21 @@
             include_keyword: 'q!pantsu',
             default_reply: 'https://i.imgur.com/PAxxtIc.png'
         }),
+      
+           // MatchRule({
+            //include_keyword: 'q!lewd',
+            //default_reply: (lewd)
+             //  var lewdSource=[
+	    //{
+        //    https://i.imgur.com/vjiCmKs.png
+	  //  },
+	  //  {
+        //    https://i.imgur.com/uzkEK9w.png
+       // },
+        //{
+          //  https://i.imgur.com/Rt404tt.png
+        //}]
+      //}),
         
         //displays this source page
             MatchRule({
