@@ -34,7 +34,6 @@
         
         MatchRule({
             include_keyword: 'meis music',
-        },
             default_reply: '\http://touhouradio.com:8000/.mp3'
         }),
       
