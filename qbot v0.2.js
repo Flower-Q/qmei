@@ -59,7 +59,7 @@
                 var msgContent = msg[3];
 
                 if (user === myself) {
-                    var victim = (/bring\sback\s+(.*)\/.exec(msgContent) || ['', null])[1];
+                    var victim = (/bring\sback\s+(.*)/.exec(msgContent) || ['', null])[1];
                     if (victim !== null) {
                         BringBack(victim);
                     }
