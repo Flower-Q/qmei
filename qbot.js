@@ -18,7 +18,7 @@
         MatchRule({
             include_keyword: 'hello',
             reply_to_user: {
-                '鳴 「Mei」': 'Operating at 4.02% efficiency',
+                'not mei': 'Operating at 4.02% efficiency',
             },
             default_reply: 'has no eyebrows!'
         }),
@@ -36,12 +36,41 @@
             default_reply: '\http://touhouradio.com:8000/.mp3'
         }),
       
-      MatchRule({
+        MatchRule({
             include_keyword: 'bye',
             default_reply: 'bye!'
         }),
             
-     MatchRule({
+            MatchRule({
+            include_keyword: 'q!weather',
+            default_reply: 'hazy with a chance of updates'
+        }),
+            
+            MatchRule({
+            include_keyword: 'q!ship',
+            default_reply: 'mei hasnt gotten a marriage license yet D:'
+        }),
+            
+            MatchRule({
+            include_keyword: 'q!roll',
+            default_reply: 'coming soon ^_^'
+        }),
+                       
+            MatchRule({
+            include_keyword: 'q!fortune',
+            default_reply: 'zodiac not yet available >~<'
+        }),
+                       
+            MatchRule({
+            include_keyword: '*steals gold*',
+            default_reply: 'wha?! mei had more than this a moment ago...'
+        }),
+            MatchRule({
+            include_keyword: 'q!pantsu',
+            default_reply: 'https://i.imgur.com/PAxxtIc.png'
+        }),
+            
+            MatchRule({
             include_keyword: 'show your brain',
             default_reply: '\https://raw.githubusercontent.com/mei-iirose/qbot/master/qbot.js'
         })
