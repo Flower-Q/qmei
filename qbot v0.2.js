@@ -39,7 +39,13 @@
       MatchRule({
             include_keyword: 'bye',
             default_reply: 'bye!'
+        }),
+              
+      MatchRule({
+            include_keyword: 'quote',
+            default_reply: '<some code to write output from random quote selector>'
         })
+        
     ];
   
     getcontents = (function() {
