@@ -12,7 +12,6 @@
     const MATCH_RULES = [
         MatchRule({
             begin_with_keyword: ['hi mei', 'Hi Mei', 'hi Mei', 'Hi mei', 'Hello Mei', 'hello Mei', 'hello mei'],
-            },
             default_reply: 'has no eyebrows!'
         }),
 
