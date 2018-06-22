@@ -67,7 +67,8 @@
            MatchRule({ 
            begin_with_keyword: myself + ' &lt; q!', 
            include_keyword: 'fortune', 
-           default_reply: 'zodiac not yet available >~<' }),
+           default_reply: 'zodiac not yet available >~<' 
+        }),
         
         //initiates macro to give thief 4 gold
             MatchRule({
