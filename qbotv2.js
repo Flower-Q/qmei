@@ -45,55 +45,54 @@
                 
         //fetches weather info for minnesota from noaa
         MatchRule({
-            begin_with_keyword: myself + ' &lt; ',
+            begin_with_keyword: myself + ' &lt; q!',
             include_keyword: 'weather',
             default_reply: ['Today: Scattered clouds, with a high around 60. Northeast wind around 10 mph slowing toward evening. Tonight: Partly cloudy, with a low around 48. Northeast wind around 5 mph becoming calm after midnight. Tomorrow: Mostly sunny, with a high near 72. Calm wind becoming east around 5 mph in the afternoon. Tomorrow Night: Partly cloudy, with a low around 51. East wind around 5 mph becoming calm after midnight.']
         }),
             
         //pairs two users in the chat
             MatchRule({
-            begin_with_keyword: myself + ' &lt; ',
+            begin_with_keyword: myself + ' &lt; q!',
             include_keyword: 'ship',
             default_reply: 'mei hasnt gotten a marriage license yet D:'
         }),
         
         //displays random whole number between 0001 and 9999
             MatchRule({
-            begin_with_keyword: myself + ' &lt; ',
-            include_keyword: 'roll',
+            begin_with_keyword: myself + ' &lt; q!', 
             default_reply: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
         }),
         
         //fetches horoscope
-            MatchRule({
-            begin_with_keyword: myself + ' &lt; ',
-            include_keyword: 'fortune <zodiac>',
-            default_reply: 'zodiac not yet available >~<'
-        }),
+           MatchRule({ 
+           begin_with_keyword: myself + ' &lt; q!', 
+           include_keyword: 'fortune', 
+           default_reply: 'zodiac not yet available >~<' }),
         
         //initiates macro to give thief 4 gold
             MatchRule({
-            begin_with_keyword: myself + ' &lt; ',
+            begin_with_keyword: myself + ' &lt; q!',
             include_keyword: '*steals gold*',
             default_reply: 'wha?! mei had more than this a moment ago...'
         }),
             
         //just for lulz    
             MatchRule({
+            begin_with_keyword: myself + ' &lt; q!',
             include_keyword: 'pantsu',
             default_reply: 'https://i.imgur.com/PAxxtIc.png'
         }),
         
          //if you use this mei will murder you          
              MatchRule({
-             begin_with_keyword: myself + ' &lt; ',
+             begin_with_keyword: myself + ' &lt; q!',
              include_keyword: 'lewd',
              default_reply: ['https://i.imgur.com/WB0Qj7Y.png', 'https://i.imgur.com/bnCmlGN.png', 'https://i.imgur.com/oTBgB0M.png', 'https://i.imgur.com/vjiCmKs.png', 'https://i.imgur.com/uzkEK9w.png', 'https://i.imgur.com/Rt404tt.png']
         }),
                 
         //displays this source page
             MatchRule({
-            begin_with_keyword: myself + ' &lt; ',
+            begin_with_keyword: myself + ' &lt; q!',
             include_keyword: 'show your brain',
             default_reply: '\https://raw.githubusercontent.com/mei-iirose/qbot/master/qbot.js'
         })
