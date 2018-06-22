@@ -98,7 +98,13 @@
              include_keyword: 'lewd',
              default_reply: ['https://i.imgur.com/WB0Qj7Y.png', 'https://i.imgur.com/bnCmlGN.png', 'https://i.imgur.com/oTBgB0M.png', 'https://i.imgur.com/vjiCmKs.png', 'https://i.imgur.com/uzkEK9w.png', 'https://i.imgur.com/Rt404tt.png']
         }),
-                
+        
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: 'help',
+            default_reply: 'tag Mei or prefix q! to commands. i.e. q!roll. Command List: roll (20 sided dice), weather (generates random weather forecast), ship (pairs two random users in the chat), fortune <zodiac> i.e. q!fortune capricorn (fetches horoscope for today), radio (post media link to Touhou Radio), help (displays this help message)'
+        }),
+                        
         //displays this source page
             MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
