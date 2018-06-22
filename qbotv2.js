@@ -86,6 +86,7 @@
                 
         //displays this source page
             MatchRule({
+            begin_with_keyword: myself + ' &lt; ',
             include_keyword: 'show your brain',
             default_reply: '\https://raw.githubusercontent.com/mei-iirose/qbot/master/qbot.js'
         })
@@ -144,33 +145,22 @@
     };
 
     function MatchRule(rule) {
-        var matchAll = function (str, keywords, matchFunc) {
-            if (typeof keywords === 'string') {
-                return matchFunc(str, keywords);
-            } else {
-                return keywords.length === 0 || keywords.some(function (keyword) {
-                    return matchFunc(str, keyword)
-                });
-            }
-        };
+        var regex = (function () {
+            var regexStr;
+            var escape = function (str) {
+                return str.replace(/(?=[\/\\^$*+?.()|{}[\]])/g, "\\");
+            };
+            var joinKeywords = function (keywords) {
+                if (keywords === undefined) { return ''; }
+                return '(' + (Array.isArray(keywords) ? keywords.map(escape).join('|') : escape(keywords)) + ')';
+            };
 
-        var matchBegin = function (message) {
-            return matchAll(message, rule.begin_with_keyword, function (str, keyword) {
-                return str.lastIndexOf(keyword, 0) === 0;
-            });
-        };
+            regexStr = '^' + joinKeywords(rule.begin_with_keyword) +
+                       '.*' + joinKeywords(rule.include_keyword) +
+                       '.*' + joinKeywords(rule.end_with_keyword) + '$';
 
-        var matchInclude = function (message) {
-            return matchAll(message, rule.include_keyword, function (str, keyword) {
-                return str.indexOf(keyword) !== -1;
-            });
-        };
-
-        var matchEnd = function (message) {
-            return matchAll(message, rule.end_with_keyword, function (str, keyword) {
-                return str.endsWith(keyword);
-            });
-        };
+            return new RegExp(regexStr);
+        })();
 
         var getReply = function (user) {
             if (rule.hasOwnProperty('reply_to_user')
@@ -186,10 +176,7 @@
         };
 
         return function (user, message) {
-            var matched = (!rule.hasOwnProperty('begin_with_keyword') || matchBegin(message)) &&
-                          (!rule.hasOwnProperty('include_keyword') || matchInclude(message)) &&
-                          (!rule.hasOwnProperty('end_with_keyword') || matchEnd(message));
-            if (matched) {
+            if (regex.test(message)) {
                 return getReply(user);
             }
         };
