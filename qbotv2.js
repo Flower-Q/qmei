@@ -1,285 +1,201 @@
-
-Violentmonkey
-Installed scripts
-Settings
-About
-qbot
-0min
-Script Editor
-Code
-Settings
-Values
-How to edit with your favorite editor?
-
-1
-
 // ==UserScript==
-
-2
-
 // @name       iirose-mei-bot
-
-3
-
 // @include    https://iirose.com/messages.html
-
-4
-
 // @grant      none
-
-5
-
 // ==/UserScript==
 
-6
-
-​
-
-7
-
 (function () {
-
-8
-
     'use strict';
 
-9
-
-​
-
-10
-
     const JOIN_MESSAGE = `(= =) じーーーー`;
-
-11
-
     const COME_BACK_MESSAGE = `come back!`;
-
-12
-
     const MATCH_RULES = [
-
-13
-
         MatchRule({
-
-14
-
             begin_with_keyword: ['hi mei', 'Hi Mei', 'hi Mei', 'Hi mei', 'Hello Mei', 'hello Mei', 'hello mei'],
-
-15
-
             reply_to_user: {
-
-16
-
                 '花Q': 'mei\'s brain feels glitchy',
-
-17
-
                 
-
-18
-
                 'Ruby': 'Rubeh Rubeh Rubeh!',
-
-19
-
             },
-
-20
-
             default_reply: 'has no eyebrows!'
-
-21
-
         }),
-
-22
-
-​
-
-23
 
         MatchRule({
-
-24
-
             include_keyword: 'hello',
-
-25
-
             reply_to_user: {
-
-26
-
                 '鳴 「Mei」': 'soup!',
-
-27
-
             },
-
-28
-
             default_reply: 'has no eyebrows!'
-
-29
-
         }),
-
-30
-
-​
-
-31
 
       MatchRule({
-
-32
-
             end_with_keyword: ['poke', 'pokes'],
-
-33
-
             reply_to_user: {
-
-34
-
                 '1%': 'rebooting...',
-
-35
-
             },
-
-36
-
             default_reply: 'mei will bite you!'
-
-37
-
         }),
 
-38
-
-​
-
-39
-
-​
-
-40
 
         MatchRule({
-
-41
-
             end_with_keyword: 'bye',
-
-42
-
             default_reply: 'bye!'
-
-43
-
         }),
-
-44
-
                 
-
-45
-
         //fetches weather info for minnesota from noaa
-
-46
-
         MatchRule({
-
-47
-
             include_keyword: 'q!weather',
-
-48
-
             default_reply: ['Today: Scattered clouds, with a high around 60. Northeast wind around 10 mph slowing toward evening. Tonight: Partly cloudy, with a low around 48. Northeast wind around 5 mph becoming calm after midnight. Tomorrow: Mostly sunny, with a high near 72. Calm wind becoming east around 5 mph in the afternoon. Tomorrow Night: Partly cloudy, with a low around 51. East wind around 5 mph becoming calm after midnight.']
-
-49
-
         }),
-
-50
-
             
-
-51
-
         //pairs two users in the chat
-
-52
-
             MatchRule({
-
-53
-
             include_keyword: 'q!ship',
-
-54
-
             default_reply: 'mei hasnt gotten a marriage license yet D:'
-
-55
-
         }),
-
-56
-
         
-
-57
-
         //displays random whole number between 0001 and 9999
-
-58
-
             MatchRule({
-
-59
-
             include_keyword: 'q!roll',
-
-60
-
             default_reply: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
-
-61
-
         }),
-
-62
-
         
-
-63
-
         //fetches horoscope
-
-64
-
             MatchRule({
-
-65
-
             include_keyword: 'q!fortune <zodiac>',
-
-66
-
             default_reply: 'zodiac not yet available >~<'
-
-67
-
         }),
-
-68
-
         
+        //initiates macro to give thief 4 gold
+            MatchRule({
+            include_keyword: '*steals gold*',
+            default_reply: 'wha?! mei had more than this a moment ago...'
+        }),
+            
+        //just for lulz    
+            MatchRule({
+            include_keyword: 'q!pantsu',
+            default_reply: 'https://i.imgur.com/PAxxtIc.png'
+        }),
+        
+         //if you use this mei will murder you          
+             MatchRule({
+             include_keyword: 'q!lewd',
+             default_reply: ['https://i.imgur.com/WB0Qj7Y.png', 'https://i.imgur.com/bnCmlGN.png', 'https://i.imgur.com/oTBgB0M.png', 'https://i.imgur.com/vjiCmKs.png', 'https://i.imgur.com/uzkEK9w.png', 'https://i.imgur.com/Rt404tt.png']
+        }),
+                
+        //displays this source page
+            MatchRule({
+            include_keyword: 'show your brain',
+            default_reply: '\https://raw.githubusercontent.com/mei-iirose/qbot/master/qbot.js'
+        })
+    ];
 
+    getcontents = (function() {
+        var baseFunc = getcontents;
+
+        const JOINED = 'm__1';
+        const MOVED = 'm__2';
+        const LEFT = 'm__3';
+
+        return function() {
+            baseFunc.apply(this, arguments);
+
+            arguments[0].split('<').forEach(function (msg) {
+                msg = msg.split('>');
+
+                var user = msg[2];
+                var msgContent = msg[3];
+
+                if (user === myself) {
+                    var regex = /bring\sback\s+(.*)/
+                    var res = regex.exec(msgContent);
+                    if (res !== null) {
+                        BringBack(res[1]);
+                    }
+                } else if (msgContent === LEFT || msgContent.lastIndexOf(MOVED, 0) === 0) {
+                    SendMessage(user + ' < ' + COME_BACK_MESSAGE);
+                } else if (msgContent === JOINED) {
+                    SendMessage(user + ' < ' + JOIN_MESSAGE);
+                } else {
+                    MATCH_RULES.forEach(function (matchRule) {
+                        var reply = matchRule(user, msgContent);
+                        if (typeof reply === 'string') {
+                            SendMessage(user + ' < ' + reply);
+                        }
+                    });
+                }
+            });
+        };
+    })();
+
+    function SendMessage(message) {
+        socket.send(JSON.stringify({
+            m: message,
+            mc: inputcolorhex
+        }));
+    };
+
+    function BringBack(victim) {
+        socket.send('!2' + JSON.stringify({
+            c: htmlspecialchars(toLowerCase(victim)),
+            c2: '19_58173ede6c2c6'
+        }));
+    };
+
+    function MatchRule(rule) {
+        var matchAll = function (str, keywords, matchFunc) {
+            if (typeof keywords === 'string') {
+                return matchFunc(str, keywords);
+            } else {
+                return keywords.length === 0 || keywords.some(function (keyword) {
+                    return matchFunc(str, keyword)
+                });
+            }
+        };
+
+        var matchBegin = function (message) {
+            return matchAll(message, rule.begin_with_keyword, function (str, keyword) {
+                return str.lastIndexOf(keyword, 0) === 0;
+            });
+        };
+
+        var matchInclude = function (message) {
+            return matchAll(message, rule.include_keyword, function (str, keyword) {
+                return str.indexOf(keyword) !== -1;
+            });
+        };
+
+        var matchEnd = function (message) {
+            return matchAll(message, rule.end_with_keyword, function (str, keyword) {
+                return str.endsWith(keyword);
+            });
+        };
+
+        var getReply = function (user) {
+            if (rule.hasOwnProperty('reply_to_user')
+                    && rule.reply_to_user.hasOwnProperty(user)) {
+                return rule.reply_to_user[user];
+            } else if (rule.hasOwnProperty('default_reply')) {
+                if (typeof rule.default_reply === 'string') {
+                    return rule.default_reply;
+                } else {
+                    return rule.default_reply[RandomInt(rule.default_reply.length)];
+                }
+            }
+        };
+
+        return function (user, message) {
+            var matched = (!rule.hasOwnProperty('begin_with_keyword') || matchBegin(message)) &&
+                          (!rule.hasOwnProperty('include_keyword') || matchInclude(message)) &&
+                          (!rule.hasOwnProperty('end_with_keyword') || matchEnd(message));
+            if (matched) {
+                return getReply(user);
+            }
+        };
+    };
+
+    function RandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    };
+})();
