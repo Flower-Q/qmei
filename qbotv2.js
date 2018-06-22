@@ -13,7 +13,8 @@
         MatchRule({
             begin_with_keyword: ['hi mei', 'Hi Mei', 'hi Mei', 'Hi mei', 'Hello Mei', 'hello Mei', 'hello mei'],
             reply_to_user: {
-                '花Q': 'mei\'s brain feels glitchy',
+                ['花Q': 'mei\'s brain feels glitchy',
+                'Ruby: 'Rubeh Rubeh Rubeh!,]
             },
             default_reply: 'has no eyebrows!'
         }),
@@ -26,6 +27,15 @@
             default_reply: 'has no eyebrows!'
         }),
 
+      MatchRule({
+            end_with_keyword: ['poke', 'pokes'],
+            reply_to_user: {
+                '1%': 'rebooting...',
+            },
+            default_reply: 'mei will bite you!'
+        }),
+
+
         MatchRule({
             end_with_keyword: 'bye',
             default_reply: 'bye!'
@@ -34,7 +44,7 @@
         //fetches weather info for minnesota from noaa
         MatchRule({
             include_keyword: 'q!weather',
-            default_reply: 'Hazy with a chance of updates'
+            default_reply: ['Today: Scattered clouds, with a high around 60. Northeast wind around 10 mph slowing toward evening. Tonight: Partly cloudy, with a low around 48. Northeast wind around 5 mph becoming calm after midnight. Tomorrow: Mostly sunny, with a high near 72. Calm wind becoming east around 5 mph in the afternoon. Tomorrow Night: Partly cloudy, with a low around 51. East wind around 5 mph becoming calm after midnight.']
         }),
             
         //pairs two users in the chat
@@ -70,7 +80,7 @@
          //if you use this mei will murder you          
              MatchRule({
              include_keyword: 'q!lewd',
-             default_reply: ['https://i.imgur.com/vjiCmKs.png', 'https://i.imgur.com/uzkEK9w.png', 'https://i.imgur.com/Rt404tt.png']
+             default_reply: ['https://i.imgur.com/WB0Qj7Y.png', 'https://i.imgur.com/bnCmlGN.png', 'https://i.imgur.com/oTBgB0M.png', 'https://i.imgur.com/vjiCmKs.png', 'https://i.imgur.com/uzkEK9w.png', 'https://i.imgur.com/Rt404tt.png']
         }),
                 
         //displays this source page
