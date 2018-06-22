@@ -46,7 +46,7 @@
         //displays random whole number between 0001 and 9999
             MatchRule({
             include_keyword: 'q!roll',
-            default_reply: 'coming soon ^_^'
+            default_reply: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
         }),
         
         //fetches horoscope
@@ -166,7 +166,11 @@
                     && rule.reply_to_user.hasOwnProperty(user)) {
                 return rule.reply_to_user[user];
             } else if (rule.hasOwnProperty('default_reply')) {
-                return rule.default_reply;
+                if (typeof rule.default_reply === 'string') {
+                    return rule.default_reply;
+                } else {
+                    return rule.default_reply[RandomInt(rule.default_reply.length)];
+                }
             }
         };
 
@@ -178,5 +182,9 @@
                 return getReply(user);
             }
         };
+    };
+
+    function RandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
     };
 })();
