@@ -103,7 +103,7 @@
             MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'show your brain',
-            default_reply: '\https://raw.githubusercontent.com/mei-iirose/qbot/master/qbot.js'
+            default_reply: '\https://raw.githubusercontent.com/mei-iirose/qbot/master/cyborg.js'
         })
     ];
 
