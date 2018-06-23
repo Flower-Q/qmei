@@ -86,7 +86,7 @@
             include_keyword: 'wish',
             default_reply: 'your wish has been granted'
         }),
-        //q!command template
+        //q!nuh uh cta
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'yes',
@@ -95,7 +95,7 @@
                 default_reply: null
             }
         }),
-        //q!command template
+        //q!peacewithsnack
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'peace',
@@ -107,7 +107,7 @@
         //q!command template
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
-            include_keyword: 'command',
+            include_keyword: ['command1', 'command2'],
             default_reply: ['response1','response2']
         }),
         //just for lulz
