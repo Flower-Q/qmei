@@ -80,6 +80,12 @@
             include_keyword: 'color',
             default_reply: getRandomColor()
         }),
+        //q!meitime
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: 'time',
+            default_reply: currentDateTime()
+        }),
         //cargo's command
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
@@ -233,17 +239,24 @@ help (displays this help message)`
         return Math.floor(Math.random() * Math.floor(max));
     };
     function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
-
-
-function setRandomColor() {
-  $("#colorpad").css("background-color", getRandomColor());
-}
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    function setRandomColor() {
+        $("#colorpad").css("background-color", getRandomColor());
+    }
+    function currentDateTime() {
+        var currentdate = new Date();
+        var datetime = "Last Sync: " + currentdate.getDate() + "/"
+        + (currentdate.getMonth()+1) + "/"
+        + currentdate.getFullYear() + " @ "
+        + currentdate.getHours() + ":"
+        + currentdate.getMinutes() + ":"
+        + currentdate.getSeconds();
+        return datetime;
+    }
 })();
