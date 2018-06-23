@@ -246,9 +246,6 @@ help (displays this help message)`
         }
         return color;
     }
-    function setRandomColor() {
-        $("#colorpad").css("background-color", getRandomColor());
-    }
     function currentDateTime() {
         var currentdate = new Date();
         var datetime = "Last Sync: " + currentdate.getDate() + "/"
