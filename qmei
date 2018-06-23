@@ -95,15 +95,6 @@
                 default_reply: null
             }
         }),
-        //q!peacewithsnack
-        MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
-            include_keyword: 'peace',
-            reply_to_user: {
-                'The Snake': 'friends',
-                default_reply: null
-            }
-        }),
         //q!command template
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
