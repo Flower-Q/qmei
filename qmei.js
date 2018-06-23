@@ -42,7 +42,7 @@
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'radio',
-            default_reply: '\\http://touhouradio.com:8000/.mp3'
+            default_reply: '\http://touhouradio.com:8000/.mp3'
         }),
         //fetches weather info for minnesota from noaa
         MatchRule({
