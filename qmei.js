@@ -78,7 +78,7 @@
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'color',
-            default_reply: 'hex color generator coming soon'
+            default_reply: getRandomColor()
         }),
         //cargo's command
         MatchRule({
@@ -232,4 +232,18 @@ help (displays this help message)`
     function RandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
     };
+    function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
+
+function setRandomColor() {
+  $("#colorpad").css("background-color", getRandomColor());
+}
 })();
