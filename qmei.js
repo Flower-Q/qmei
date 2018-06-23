@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         q!mei
-// @namespace    https://raw.githubusercontent.com/mei-iirose/qmei/master/qmei.js
+// @namespace    https://github.com/mei-iirose/qbot/blob/master/qmei.js
 // @version      1.0
 // @description  mei is a cyborg!
 // @author       mei.iirose@pm.me
@@ -116,7 +116,7 @@
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'lewd',
-            default_reply: ['https://i.imgur.com/WB0Qj7Y.png', 'https://i.imgur.com/bnCmlGN.png', 'https://i.imgur.com/oTBgB0M.png', 'https://i.imgur.com/vjiCmKs.png', 'https://i.imgur.com/uzkEK9w.png', 'https://i.imgur.com/Rt404tt.png']
+            default_reply: ['https://i.imgur.com/C1nrsn7.png', 'https://i.imgur.com/WBhpRb7.png', 'https://i.imgur.com/0sX7wTI.png', 'https://i.imgur.com/E2KdG6d.png', 'https://i.imgur.com/YDVySNt.png', 'https://i.imgur.com/oTBgB0M.png', 'https://i.imgur.com/C1nrsn7.png', 'https://i.imgur.com/tCAFemv.png', 'https://i.imgur.com/Rt404tt.png', 'https://i.imgur.com/bnCmlGN.png', 'https://i.imgur.com/Ncmk49X.png', 'https://i.imgur.com/uzkEK9w.png', 'https://i.imgur.com/vjiCmKs.png', 'https://i.imgur.com/WB0Qj7Y.png', 'https://i.imgur.com/PAxxtIc.png']
         }),
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
