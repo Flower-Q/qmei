@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  mei is a cyborg!
 // @author       mei.iirose@pm.me
-// @match        https://raw.githubusercontent.com/mei-iirose/qbot/master/qmei
+// @include      https://iirose.com/messages.html
 // @grant        none
 // ==/UserScript==
 
