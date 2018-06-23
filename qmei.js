@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         q!mei
-// @namespace    https://raw.githubusercontent.com/mei-iirose/qmei/master/qmei.js
+// @namespace    https://github.com/mei-iirose/qbot/blob/master/qmei.js
 // @version      1.0
 // @description  mei is a cyborg!
 // @author       mei.iirose@pm.me
@@ -15,13 +15,13 @@
     const COME_BACK_MESSAGE = `come back!`;
     const MATCH_RULES = [
         MatchRule({
-            begin_with_keyword: ['hello', 'hi', 'Hello', 'Hi', 'hey', 'Hey', 'heyo', 'Heyo'],
+            begin_with_keyword: ['hello', 'hi', 'Hello', 'Hi', 'hey', 'Hey', 'heyo', 'Heyo', 'Hello!', 'hello!'],
             reply_to_user: {
                 '花Q': 'mei\'s brain feels glitchy',
                 'Ruby': 'Rubeh Rubeh Rubeh!',
                 'Cargo': 'weba!',
             },
-            default_reply: 'has no eyebrows!'
+            default_reply: null
         }),
 
         MatchRule({
@@ -36,7 +36,7 @@
 
         MatchRule({
             end_with_keyword: 'bye',
-            default_reply: 'bye!'
+            default_reply: null
         }),
         //this is working, media player provided by site
         MatchRule({
@@ -56,7 +56,7 @@
             include_keyword: 'ship',
             default_reply: 'mei hasnt gotten a marriage license yet D:'
         }),
-        //displays random whole number between 0001 and 9999
+        //displays random whole number between 01 and 20
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'roll',
@@ -94,8 +94,7 @@
         }),
         //q!nuh uh cta
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
-            include_keyword: 'yes',
+            include_keyword: ['yes', 'uh huh'],
             reply_to_user: {
                 'C-ta': 'nuh uh',
                 default_reply: null
