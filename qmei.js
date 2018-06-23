@@ -6,6 +6,7 @@
 // @author       mei.iirose@pm.me
 // @include      https://iirose.com/messages.html
 // @grant        none
+//https://iirose.com/#s=58173ede6c2c6
 // ==/UserScript==
 
 (function() {
