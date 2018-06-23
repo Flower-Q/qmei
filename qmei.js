@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         q!mei
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/mei-iirose/qbot/blob/master/qmei.js
 // @version      1.0
 // @description  mei is a cyborg!
 // @author       mei.iirose@pm.me
