@@ -10,7 +10,7 @@
 
 (function() {
     'use strict';
-
+    var meiBotData=JSON.parse(localStorage.getItem('meiBotData') || '{}');
     const JOIN_MESSAGE = `(= =) じーーーー`;
     const COME_BACK_MESSAGE = `come back!`;
     const MATCH_RULES = [
@@ -263,5 +263,12 @@ help (displays this help message)`
         + currentdate.getMinutes() + ":"
         + currentdate.getSeconds();
         return datetime;
+    }
+    function saveData(key,value){
+        meiBotData.key=value;
+        localStorage.setItem('meiBotData',JSON.stringify(meiBotData));
+    }
+    function getData(key){
+        return meiBotData.key;
     }
 })();
