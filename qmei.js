@@ -46,7 +46,7 @@
             include_keyword: 'radio',
             default_reply: '\http://touhouradio.com:8000/.mp3'
         }),
-        //fetches weather info for minnesota from noaa
+        //fetches hourly weather info for okc from noaa
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'weather',
@@ -134,7 +134,7 @@ tag Mei or prefix q! to commands. i.e. q!roll.
 Command List:
 hug (hugs mei),
 roll (20 sided dice),
-weather (generates random weather forecast),
+weather (plays weather forecast, updated hourly),
 ship (pairs two random users in the chat),
 fortune <zodiac> i.e. q!fortune capricorn (fetches horoscope for today),
 radio (post media link to Touhou Radio),
