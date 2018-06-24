@@ -50,7 +50,7 @@
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'weather',
-            default_reply: ['Today: Scattered clouds, with a high around 60. Northeast wind around 10 mph slowing toward evening. Tonight: Partly cloudy, with a low around 48. Northeast wind around 5 mph becoming calm after midnight. Tomorrow: Mostly sunny, with a high near 72. Calm wind becoming east around 5 mph in the afternoon. Tomorrow Night: Partly cloudy, with a low around 51. East wind around 5 mph becoming calm after midnight.']
+            default_reply: 'http://www.crh.noaa.gov/images/rtimages/oun/audio/OKCHWROKC.mp3'
         }),
         //pairs two users in the chat
         MatchRule({
