@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         q!mei
+// @name         y!yurino
 // @namespace    https://github.com/mei-iirose/qbot/blob/master/qmei.js
 // @version      1.0
 // @description  mei is a cyborg!
@@ -42,59 +42,59 @@
         }),
         //this is working, media player provided by site
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: 'radio',
             default_reply: '\http://touhouradio.com:8000/.mp3'
         }),
         //fetches hourly weather info for okc from noaa
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: 'weather',
             default_reply: 'http://www.crh.noaa.gov/images/rtimages/oun/audio/OKCHWROKC.mp3'
         }),
         //pairs two users in the chat
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: 'ship',
             default_reply: 'mei hasnt gotten a marriage license yet D:'
         }),
         //displays random whole number between 01 and 20
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: 'roll',
             default_reply: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
         }),
         //fetches horoscope
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: 'fortune',
             default_reply: 'zodiac not yet available >~<'
         }),
         //initiates macro to give thief 4 gold,
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: '*steals gold*',
             default_reply: 'wha?! mei had more than this a moment ago...'
         }),
-        //q!colorpicker
+        //y!colorpicker
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: 'color',
             default_reply: getRandomColor()
         }),
-        //q!meitime
+        //y!meitime
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: 'time',
             default_reply: currentDateTime()
         }),
         //cargo's command
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: 'wish',
             default_reply: 'your wish has been granted'
         }),
-        //q!nuh uh cta
+        //y!nuh uh cta
         MatchRule({
             include_keyword: ['yes', 'uh huh'],
             reply_to_user: {
@@ -102,47 +102,47 @@
                 default_reply: null
             }
         }),
-        //q!command template
+        //y!command template
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: ['hug', 'Hug', '*hug*'],
             default_reply: ['https://media1.tenor.com/images/506aa95bbb0a71351bcaa753eaa2a45c/tenor.gif?itemid=7552075', 'https://media.tenor.com/images/9f733ddf31ae241a108417bcea9a01e7/tenor.gif', 'https://media1.tenor.com/images/49a21e182fcdfb3e96cc9d9421f8ee3f/tenor.gif?itemid=3532079', 'https://i.redd.it/y5ukl117pckz.gif', 'https://media.giphy.com/media/pXQhWw2oHoPIs/giphy-downsized-large.gif']
         }),
-        //q!command template
+        //y!command template
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: ['command1', 'command2'],
             default_reply: ['response1','response2']
         }),
         //just for lulz
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: 'pantsu',
             default_reply: 'https://i.imgur.com/PAxxtIc.png'
         }),
         //if you use this mei will murder you
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: 'lewd',
             default_reply: ['https://i.imgur.com/C1nrsn7.png', 'https://i.imgur.com/WBhpRb7.png', 'https://i.imgur.com/0sX7wTI.png', 'https://i.imgur.com/E2KdG6d.png', 'https://i.imgur.com/YDVySNt.png', 'https://i.imgur.com/oTBgB0M.png', 'https://i.imgur.com/C1nrsn7.png', 'https://i.imgur.com/tCAFemv.png', 'https://i.imgur.com/Rt404tt.png', 'https://i.imgur.com/bnCmlGN.png', 'https://i.imgur.com/Ncmk49X.png', 'https://i.imgur.com/uzkEK9w.png', 'https://i.imgur.com/vjiCmKs.png', 'https://i.imgur.com/WB0Qj7Y.png', 'https://i.imgur.com/PAxxtIc.png']
         }),
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: 'help',
             default_reply: `
-tag Mei or prefix q! to commands. i.e. q!roll.
+tag Mei or prefix y! to commands. i.e. y!roll.
 Command List:
 hug (hugs mei),
 roll (20 sided dice),
 weather (plays weather forecast, updated hourly),
 ship (pairs two random users in the chat),
-fortune <zodiac> i.e. q!fortune capricorn (fetches horoscope for today),
+fortune <zodiac> i.e. y!fortune capricorn (fetches horoscope for today),
 radio (post media link to Touhou Radio),
 help (displays this help message)`
         }),
         //displays this source page
         MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            begin_with_keyword: [myself + ' &lt;', 'y!'],
             include_keyword: 'show your brain',
             reply_to_user: {
                 'Ruby': '/https://raw.githubusercontent.com/mei-iirose/qbot/master/qmei',
