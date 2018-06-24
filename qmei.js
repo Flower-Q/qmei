@@ -6,7 +6,6 @@
 // @author       mei.iirose@pm.me
 // @include      https://iirose.com/messages.html
 // @grant        none
-//https://iirose.com/#s=58173ede6c2c6
 // ==/UserScript==
 
 (function() {
@@ -21,6 +20,8 @@
                 '花Q': 'mei\'s brain feels glitchy',
                 'Ruby': 'Rubeh Rubeh Rubeh!',
                 'Cargo': 'weba!',
+                'Aluin': 'shut up bully',
+                'Doll': 'Doll is a mean friend'
             },
             default_reply: null
         }),
@@ -104,6 +105,12 @@
         //q!command template
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: ['hug', 'Hug', '*hug*'],
+            default_reply: ['https://media1.tenor.com/images/506aa95bbb0a71351bcaa753eaa2a45c/tenor.gif?itemid=7552075', 'https://media.tenor.com/images/9f733ddf31ae241a108417bcea9a01e7/tenor.gif', 'https://media1.tenor.com/images/49a21e182fcdfb3e96cc9d9421f8ee3f/tenor.gif?itemid=3532079', 'https://i.redd.it/y5ukl117pckz.gif', 'https://media.giphy.com/media/pXQhWw2oHoPIs/giphy-downsized-large.gif']
+        }),
+        //q!command template
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: ['command1', 'command2'],
             default_reply: ['response1','response2']
         }),
@@ -125,6 +132,7 @@
             default_reply: `
 tag Mei or prefix q! to commands. i.e. q!roll.
 Command List:
+hug (hugs mei),
 roll (20 sided dice),
 weather (generates random weather forecast),
 ship (pairs two random users in the chat),
