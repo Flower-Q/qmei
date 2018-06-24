@@ -102,11 +102,35 @@
                 default_reply: null
             }
         }),
-        //q!command template
+        //q!hug
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: ['hug', 'Hug', '*hug*'],
             default_reply: ['https://media1.tenor.com/images/506aa95bbb0a71351bcaa753eaa2a45c/tenor.gif?itemid=7552075', 'https://media.tenor.com/images/9f733ddf31ae241a108417bcea9a01e7/tenor.gif', 'https://media1.tenor.com/images/49a21e182fcdfb3e96cc9d9421f8ee3f/tenor.gif?itemid=3532079', 'https://i.redd.it/y5ukl117pckz.gif', 'https://media.giphy.com/media/pXQhWw2oHoPIs/giphy-downsized-large.gif']
+        }),
+        //q!beg
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: 'beg',
+            default_reply: ['response1','response2']
+        }),
+        //q!dare
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: ['dare', 'dared'],
+            default_reply: ['response1','response2']
+        }),
+        //q!slave
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: ['servant', 'maid', 'slave', 'pet'],
+            default_reply: ['response1','response2']
+        }),
+        //q!mute, should prevent messages from sending
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: ['silence', 'mute'],
+            default_reply: ['response1','response2']
         }),
         //q!command template
         MatchRule({
@@ -145,10 +169,10 @@ help (displays this help message)`
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'show your brain',
             reply_to_user: {
-                'Ruby': '/https://raw.githubusercontent.com/mei-iirose/qbot/master/qmei',
-                '花Q': '/https://raw.githubusercontent.com/mei-iirose/qbot/master/qmei',
-                '1%': '/https://raw.githubusercontent.com/mei-iirose/qbot/master/qmei',
-                default_reply: null
+                'Ruby': '/https://raw.githubusercontent.com/mei-iirose/qmei/master/qmei.js',
+                '花Q': '/https://raw.githubusercontent.com/mei-iirose/qmei/master/qmei.js',
+                '1%': 'unauthorized',
+                default_reply: 'unauthorized'
             }
         })
     ];
