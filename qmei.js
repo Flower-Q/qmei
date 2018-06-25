@@ -186,32 +186,33 @@ help (displays this help message)`
 
         return function() {
             baseFunc.apply(this, arguments);
+            if(!MsgInitialize){
+                arguments[0].split('<').forEach(function (msg) {
+                    msg = msg.split('>');
 
-            arguments[0].split('<').forEach(function (msg) {
-                msg = msg.split('>');
+                    var user = msg[2];
+                    var msgContent = msg[3];
 
-                var user = msg[2];
-                var msgContent = msg[3];
-
-                if (user === myself) {
-                    var regex = /bring\sback\s+(.*)/
-                    var res = regex.exec(msgContent);
-                    if (res !== null) {
-                        BringBack(res[1]);
-                    }
-                } else if (msgContent === LEFT || msgContent.lastIndexOf(MOVED, 0) === 0) {
-                    SendMessage(user + ' < ' + COME_BACK_MESSAGE);
-                } else if (msgContent === JOINED) {
-                    SendMessage(user + ' < ' + JOIN_MESSAGE);
-                } else {
-                    MATCH_RULES.forEach(function (matchRule) {
-                        var reply = matchRule(user, msgContent);
-                        if (typeof reply === 'string') {
-                            SendMessage(user + ' < ' + reply);
+                    if (user === myself) {
+                        var regex = /bring\sback\s+(.*)/
+                        var res = regex.exec(msgContent);
+                        if (res !== null) {
+                            BringBack(res[1]);
                         }
-                    });
-                }
-            });
+                    } else if (msgContent === LEFT || msgContent.lastIndexOf(MOVED, 0) === 0) {
+                        SendMessage(user + ' < ' + COME_BACK_MESSAGE);
+                    } else if (msgContent === JOINED) {
+                        SendMessage(user + ' < ' + JOIN_MESSAGE);
+                    } else {
+                        MATCH_RULES.forEach(function (matchRule) {
+                            var reply = matchRule(user, msgContent);
+                            if (typeof reply === 'string') {
+                                SendMessage(user + ' < ' + reply);
+                            }
+                        });
+                    }
+                });
+            }
         };
     })();
 
