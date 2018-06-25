@@ -185,7 +185,6 @@ help (displays this help message)`
         const LEFT = "'3";
 
         return function() {
-            baseFunc.apply(this, arguments);
             if(!MsgInitialize){
                 arguments[0].split('<').forEach(function (msg) {
                     msg = msg.split('>');
@@ -213,6 +212,7 @@ help (displays this help message)`
                     }
                 });
             }
+            baseFunc.apply(this, arguments);
         };
     })();
 
