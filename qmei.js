@@ -46,6 +46,171 @@
             include_keyword: 'radio',
             default_reply: '\http://touhouradio.com:8000/.mp3'
         }),
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: ['Nier', 'nier'],
+            default_reply: [`NieR: Automata OST - Wretched Weaponry (Quiet - Vocals)
+https://www.youtube.com/watch?v=xRHsEWIC8PI`,
+                            `NieR:Automata OST - Wretched Weaponry (Medium - Vocals)
+https://www.youtube.com/watch?v=FpjTILokyKM`,
+                            `NieR:Automata OST - Wretched Weaponry (Dynamic - Vocals)
+https://www.youtube.com/watch?v=oQT_LwV2qwM`,
+                            `NieR:Automata OST - Fortress of Lies
+https://www.youtube.com/watch?v=FMBScNW_CNc`,
+                            `NieR: Automata OST - City Ruins (Quiet - Vocals)
+https://www.youtube.com/watch?v=ppIvG6PBmCI`,
+                            `NieR: Automata OST - City Ruins (Medium - Vocals)
+https://www.youtube.com/watch?v=ZW_zO1ox8XE`,
+                            `NieR: Automata OST - City Ruins (Dynamic - Vocals)
+https://www.youtube.com/watch?v=Tx0U9UsUgpI`,
+                            `NieR: Automata OST - Peaceful Sleep (Vocals)
+https://www.youtube.com/watch?v=OUpGltfOU10`,
+                            `NieR: Automata OST - Memories of Dust (Quiet - Vocals)
+https://www.youtube.com/watch?v=T08xuOatEZk`,
+                            `NieR: Automata OST - Memories of Dust (Medium - Vocals)
+https://www.youtube.com/watch?v=dXmRPWXIvag`,
+                            `NieR: Automata OST - Memories of Dust (Dynamic - Vocals)
+https://www.youtube.com/watch?v=5SW1Zy6-EDw`,
+                            `NieR: Automata OST - Amusement Park (Quiet - Vocals)
+https://www.youtube.com/watch?v=k_YDwZ-9gaA`,
+                            `NieR: Automata OST - Amusement Park (Medium - Vocals)
+https://www.youtube.com/watch?v=j4n5sx6qUVc`,
+                            `NieR: Automata OST - Amusement Park (Dynamic - Vocals)
+https://www.youtube.com/watch?v=jjDO91gNiCU`,
+                            `NieR: Automata OST - A Beautiful Song (Opera Boss Theme)
+https://www.youtube.com/watch?v=YMKskuvJTcs`,
+                            `NieR: Automata OST - A Beautiful Song (Instrumental)
+https://www.youtube.com/watch?v=UZi0Qyjvyw8`,
+                            `NieR: Automata OST - Pascal
+https://www.youtube.com/watch?v=tGFOvuOxwuU`,
+                            `NieR: Automata OST - Pascal (Instrumental)
+https://www.youtube.com/watch?v=M06yl1wupn8`,
+                            `NieR: Automata OST - Forest Kingdom (Quiet - Vocals)
+https://www.youtube.com/watch?v=10A5egJh6OQ`,
+                            `NieR: Automata OST - Forest Kingdom (Medium - Vocals)
+https://www.youtube.com/watch?v=1or6ny00BAY`,
+                            `NieR: Automata OST - Forest Kingdom (Dynamic - Vocals)
+https://www.youtube.com/watch?v=p93KTqknXig`,
+                            `NieR: Automata OST - Copied City (Quiet - Vocals)
+https://www.youtube.com/watch?v=uGR5eklLV88`,
+                            `NieR: Automata OST - Copied City (Dynamic - Vocals)
+https://www.youtube.com/watch?v=uUmktoDFFKM`,
+                            `NieR: Automata OST - The Tower (Quiet - Vocals)
+https://www.youtube.com/watch?v=_6EwwGwmfM0`,
+                            `NieR: Automata OST - Tower (Medium - Vocals)
+https://www.youtube.com/watch?v=b4qEh8agDwI`,
+                            `NieR: Automata OST - Tower (Dynamic - Vocals)
+https://www.youtube.com/watch?v=tEpuIrGFj-M`,
+                            `NieR: Automata OST - Possessed by a Disease (Vocals)
+https://www.youtube.com/watch?v=VPXuopwIdBo`,
+                            `NieR: Automata OST - Possessed by Disease (Become God - Vocals)
+https://www.youtube.com/watch?v=3ruk7G3r14I`,
+                            `NieR: Automata OST - Birth of a Wish
+https://www.youtube.com/watch?v=z49X4rpxdQE`,
+                            `NieR: Automata OST - Birth of a Wish (Become God - Vocals)
+https://www.youtube.com/watch?v=_Wi5KenZI9I`,
+                            `NieR: Automata OST - Birth of a Wish (This Cannot Continue -  Vocals)
+https://www.youtube.com/watch?v=l1RM8ECQe5g`,
+                            `NieR: Automata OST - Emil (Despair - vocals)
+https://www.youtube.com/watch?v=Vf-GY3ezkHU`,
+                            `NieR: Automata OST - Grandma (Destruction)
+https://www.youtube.com/watch?v=ihV2388iAp0`,
+                            `NieR: Automata OST - Bipolar Nightmare  (Vocals)
+https://www.youtube.com/watch?v=rQuHwqMcN8w`,
+                            `NieR: Automata OST - Bipolar Nightmare (Instrumental)
+https://www.youtube.com/watch?v=9y8GLHLOCbk`,
+                            `NieR: Automata OST - War to War
+https://www.youtube.com/watch?v=mFhM1ayTsqE`,
+                            `NieR: Automata OST - End of the Unknown (Quiet - Vocals)
+https://www.youtube.com/watch?v=Hsp5Zqqf4PI`,
+                            `NieR: Automata OST - End of the Unknown  (Adam and Eve)
+https://www.youtube.com/watch?v=k5Figo-QTW0`,
+                            `NieR: Automata OST - Dark Colossus (Quiet - Vocals)
+https://www.youtube.com/watch?v=3QbkjyuO6l4`,
+                            `NieR: Automata OST - Dark Colossus (Medium - Vocals)
+https://www.youtube.com/watch?v=t7wJYftFRbY`,
+                            `NieR: Automata OST - Dark Colossus (Dynamic - Vocals)
+https://www.youtube.com/watch?v=Hc0U4Ik1yN4`,
+                            `NieR: Automata OST - Dependent Weakling (Final Boss - Vocals)
+https://www.youtube.com/watch?v=vK67sHPC4mM`,
+                            `NieR: Automata OST - Crumbling Lies
+https://www.youtube.com/watch?v=ePKjkPl8jJs`,
+                            `Nier: Automata OST - Crumbling Lies (Front)
+https://www.youtube.com/watch?v=s7sX41zOqAY`,
+                            `NieR: Automata OST - Song of the Ancients - Atonement (Vocals)
+https://www.youtube.com/watch?v=CKOM3lNFajE`,
+                            `NieR: Automata OST - Song of the Ancients - Atonement (Instrumental)
+https://www.youtube.com/watch?v=anXUayBofPA`,
+                            `NieR: Automata OST - Sound of the End (Dynamic - Vocals)
+https://www.youtube.com/watch?v=z5YChAFjxks`,
+                            `NieR: Automata OST - Alien Manifestation (Vocals)
+https://www.youtube.com/watch?v=ntHbvoYr1Lk`,
+                            `NieR: Automata OST - Alien Manifestation (Instrumental)
+https://www.youtube.com/watch?v=7I2kb9nB-RE`,
+                            ` 已刪除的影片,
+https://www.youtube.com/watch?v=0bJznex0eYQ`,
+                            `NieR: Automata OST - Voice of No Return
+https://www.youtube.com/watch?v=ubMf__iB8iI`,
+                            `NieR: Automata OST - Mourning
+https://www.youtube.com/watch?v=AzdNqDHpNWo`,
+                            `NieR: Automata OST - Faltering Prayer - Dawn Breeze (Vocals)
+https://www.youtube.com/watch?v=52O7YWYGIEU`,
+                            `NieR: Automata OST - Faltering Prayer - Starry Sky
+https://www.youtube.com/watch?v=bT4SviJIB98`,
+                            `NieR: Automata OST - The Color of Depression
+https://www.youtube.com/watch?v=f5izHod68uI`,
+                            `NieR: Automata OST - Blissful Death (Vocals)
+https://www.youtube.com/watch?v=ZNJ6LO1QIyk`,
+                            `NieR: Automata OST - Broken Heart (Vocals)
+https://www.youtube.com/watch?v=LYc3z9H8OFM`,
+                            `NieR: Automata OST - Widespread Illness (Vocals)
+https://www.youtube.com/watch?v=F9B1RF3n7XA`,
+                            `NieR: Automata OST - Treasured Times (Vocals)
+https://www.youtube.com/watch?v=Ne1HcEU7sho`,
+                            `NieR: Automata OST - Rebirth
+https://www.youtube.com/watch?v=xcSSsa6AE2M`,
+                            `NieR: Automata OST - Weight of the World (Japanese)
+https://www.youtube.com/watch?v=SGUeKCA5p1A`,
+                            `NieR: Automata OST - Weight of the World (Emi Evans)
+https://www.youtube.com/watch?v=wn_janwmzRU`,
+                            `NieR: Automata OST - Emil&#39;s Song
+https://www.youtube.com/watch?v=OwBh_7zV4Wo`,
+                            `NieR: Automata OST - Wretched Weaponry (8-bit)
+https://www.youtube.com/watch?v=lhtYq3gBHmI`,
+                            `NieR: Automata OST - City Ruins - Rays of Light (8-bit)
+https://www.youtube.com/watch?v=APfedkre9Rg`,
+                            `NieR: Automata OST - Memories of Dust (8-bit)
+https://www.youtube.com/watch?v=TiFDKDczykM`,
+                            `NieR: Automata OST - Amusement Park (8-bit)
+https://www.youtube.com/watch?v=R_NvlZu5v-Y`,
+                            `NieR: Automata OST - City Ruins - Shade (8-bit)
+https://www.youtube.com/watch?v=A9TKBjsut0s`,
+                            `NieR: Automata OST - Forest Kingdom (8-bit)
+https://www.youtube.com/watch?v=XA7OcgaYBW4`,
+                            `NieR: Automata OST - The Tower (8-bit)
+https://www.youtube.com/watch?v=gv7SWWYmQFU`,
+                            `NieR: Automata OST - Birth of a Wish (8-bit)
+https://www.youtube.com/watch?v=kQrgqcqAllw`,
+                            `NieR: Automata OST - War
+https://www.youtube.com/watch?v=ft0J9YhXUNk`,
+                            `NieR: Automata OST - A beautiful Song (8-bit)
+https://www.youtube.com/watch?v=mtTVtJevr3E`,
+                            `NieR: Automata OST - End of the Unknown (8-bit)
+https://www.youtube.com/watch?v=CGu0i8xGjA8`,
+                            `NieR: Automata OST - Dark Colossus (8-bit)
+https://www.youtube.com/watch?v=6feWpInlH1A`,
+                            `NieR: Automata OST - Dependent Weakling (8-bit)
+https://www.youtube.com/watch?v=5XoTXjxgu0U`,
+                            `NieR: Automata OST - Song of the Ancients (8-bit)
+https://www.youtube.com/watch?v=hi5hkVlWerQ`,
+                            `NieR: Automata OST - Sound of the End (8-bit)
+https://www.youtube.com/watch?v=bw2U_0fIfNo`,
+                            `NieR: Automata OST - Weight of the World (8-bit)
+https://www.youtube.com/watch?v=7n9aWlxVU8s`,
+                            `NieR: Automata OST - The End of YoRHa
+https://www.youtube.com/watch?v=DLAvHLQGOco`]
+
+        }),
         //fetches hourly weather info for okc from noaa
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
