@@ -413,25 +413,31 @@ help (displays this help message)`
             return new RegExp(regexStr);
         })();
 
-        var getReply = function (user) {
+        var getReplyMessage = function (user, message, replyData) {
+            switch (typeof replyData) {
+                case 'string':
+                    return replyData;
+                case 'function':
+                    return replyData(user, message);
+                default:
+                    return replyData[RandomInt(replyData.length)];
+            }
+        };
+        var getReply = function (user, message) {
             if (rule.hasOwnProperty('reply_to_user')
                 && rule.reply_to_user.hasOwnProperty(user)) {
-                return rule.reply_to_user[user];
+                return getReplyMessage(user, message, rule.reply_to_user[user]);
             } else if (rule.hasOwnProperty('default_reply')) {
-                if (typeof rule.default_reply === 'string') {
-                    return rule.default_reply;
-                } else {
-                    return rule.default_reply[RandomInt(rule.default_reply.length)];
-                }
+                return getReplyMessage(user, message, rule.default_reply);
             }
         };
 
         return function (user, message) {
             if (regex.test(message)) {
-                return getReply(user);
+                return getReply(user, message);
             }
         };
-    };
+    }
 
     function RandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
