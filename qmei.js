@@ -19,7 +19,7 @@
             reply_to_user: {
                 '花Q': 'mei\'s brain feels glitchy',
                 'Ruby': 'Rubeh Rubeh Rubeh!',
-                'Cargo': 'weba!',
+                'Cargo': 'box!',
                 'Aluin': 'shut up bully',
                 'Doll': 'Doll is a mean friend'
             },
