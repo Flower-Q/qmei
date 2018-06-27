@@ -129,7 +129,7 @@
                                                     'https://www.youtube.com/watch?v=bw2U_0fIfNo',
                                                     'https://www.youtube.com/watch?v=7n9aWlxVU8s',
                                                     'https://www.youtube.com/watch?v=DLAvHLQGOco'];
-                                                    inputKeyDown(moveinput,'<> '+urls[RandomInt(urls.length())]);
+                                                    inputKeyDown(moveinput,'<> '+urls[RandomInt(urls.length)]);
                                                 }
         }),
         //fetches hourly weather info for okc from noaa
