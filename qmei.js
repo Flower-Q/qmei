@@ -245,13 +245,13 @@ https://www.youtube.com/watch?v=DLAvHLQGOco`]
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'color',
-            default_reply: getRandomColor()
+            default_reply: getRandomColor
         }),
         //q!meitime
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'time',
-            default_reply: currentDateTime()
+            default_reply: currentDateTime
         }),
         //cargo's command
         MatchRule({
