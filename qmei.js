@@ -31,6 +31,7 @@
             end_with_keyword: ['poke', 'pokes', '*poke*', '*pokes*', 'Poke', '*Poke*', 'Pokes', '*Pokes*'],
             reply_to_user: {
                 '1%': 'rebooting...',
+                'Cargo': 'nuuu',
             },
             default_reply: 'mei will bite you!'
         }),
