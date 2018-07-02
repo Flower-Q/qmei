@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         q!mei
 // @namespace    https://github.com/mei-iirose/qbot/blob/master/qmei.js
-// @version      1.1
+// @version      1.2
 // @description  mei is a cyborg!
 // @author       mei.iirose@pm.me
 // @include      https://iirose.com/messages.html
@@ -178,6 +178,37 @@
         }),
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: ['ghibli', 'Ghibli'],
+            default_reply: function() {var urls =
+                ['https://www.youtube.com/watch?v=rZUppxT38Zk',
+                 'https://www.youtube.com/watch?v=k7PQgfOhxmI',
+                 'https://www.youtube.com/watch?v=6ibj6Q0YQ20',
+                 'https://www.youtube.com/watch?v=E1lbZw856gI',
+                 'https://www.youtube.com/watch?v=YTDG3Pa8Egw',
+                 'https://www.youtube.com/watch?v=rr8GurL8W_4',
+                 'https://www.youtube.com/watch?v=nBADF1LdP3g',
+                 'https://www.youtube.com/watch?v=OJ5kSCYE1Rc',
+                 'https://www.youtube.com/watch?v=owddukdxFv4',
+                 'https://www.youtube.com/watch?v=QTMjtEcQHls',
+                 'https://www.youtube.com/watch?v=MZgBjQFMPvk',
+                 'https://www.youtube.com/watch?v=5dv_iIuFJtA',
+                 'https://www.youtube.com/watch?v=vD1yAEWpzeQ',
+                 'https://www.youtube.com/watch?v=xAyS2yTua0w',
+                 'https://www.youtube.com/watch?v=-umP_1oBNSk',
+                 'https://www.youtube.com/watch?v=RpxXeNakyfY',
+                 'https://www.youtube.com/watch?v=jH1QrYzMeIw',
+                 'https://www.youtube.com/watch?v=scUyXaWMyAk',
+                 'https://www.youtube.com/watch?v=47REH5rgSpw',
+                 'https://www.youtube.com/watch?v=ZpENe4GOMAw',
+                 'https://www.youtube.com/watch?v=mo2BJ2lqdfI',
+                 'https://www.youtube.com/watch?v=TOc_hk0OMQU',
+                 'https://www.youtube.com/watch?v=A4ASDIs6JD8',
+                 'https://www.youtube.com/watch?v=TmjjHbUb4jc'];
+                                       inputKeyDown(moveinput, '<> '+urls[RandomInt(urls.length)]);
+                                      }
+        }),
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: ['flcl', 'FLCL', 'FlCl'],
             default_reply: function () {var urls =
                 [`https://www.youtube.com/watch?v=qAE8c7NcO7Q`,
@@ -214,6 +245,25 @@
                  `https://www.youtube.com/watch?v=CPShdQhc27E`,
                  `https://www.youtube.com/watch?v=k56d-0Fi3yc`,
                  `https://www.youtube.com/watch?v=c4LWtr90l0A`];
+                                        inputKeyDown(moveinput,'<> '+urls[RandomInt(urls.length)]);
+                                       }
+        }),
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: ['Soul', 'soul'],
+            default_reply: function () {var urls =
+                ['https://www.youtube.com/watch?v=ebb5AinKxWI',
+                 'https://www.youtube.com/watch?v=WnUR3be5Ebk',
+                 'https://www.youtube.com/watch?v=dVUmSgzgOqs',
+                 'https://www.youtube.com/watch?v=UWAbdiiAOZA',
+                 'https://www.youtube.com/watch?v=tGHTOVw6F4Q',
+                 'https://www.youtube.com/watch?v=lVacSI9wTbY',
+                 'https://www.youtube.com/watch?v=hG4lT4fxj8M',
+                 'https://www.youtube.com/watch?v=p9sUkJry_XA',
+                 'https://www.youtube.com/watch?v=Q2WcdaF8uL8',
+                 'https://www.youtube.com/watch?v=FBfGFGTsKZw',
+                 'https://www.youtube.com/watch?v=9wRBKCeHn4g',
+                 'https://www.youtube.com/watch?v=fwC30E1IVKQ'];
                                         inputKeyDown(moveinput,'<> '+urls[RandomInt(urls.length)]);
                                        }
         }),
@@ -338,12 +388,6 @@
             include_keyword: 'pantsu',
             default_reply: ['https://i.imgur.com/PAxxtIc.png', 'https://pics.me.me/gentleman-3d-or-pervert-de-ladies-first-17892713.png']
         }),
-        //if you use this mei will murder you
-        MatchRule({
-            begin_with_keyword: [myself + ' &lt;', 'q!'],
-            include_keyword: 'lewd',
-            default_reply: ['http://img03.deviantart.net/5491/i/2012/319/b/7/achievement_unlocked__you_are_a_pervert_by_kitsuneyin-d5l1ica.jpg', 'http://pa1.narvii.com/5961/a6da21c2342e3acf67372b709e839fae4dbd1730_hq.gif', 'https://pics.onsizzle.com/when-vou-encounter-a-prune-faced-old-pervert-you-prune-27357788.png', 'https://i.pinimg.com/736x/7b/2b/37/7b2b3730648ae3b91700c80deff27ba7.jpg', 'http://pre09.deviantart.net/8f76/th/pre/f/2013/014/7/1/achievement_unlocked__you_are_a_pervert_by_kitsuneyin-d5rfjb6.jpg', 'https://cdn.meme.am/cache/instances/folder317/500x/66161317/yoda-pervert-you-are-burn-in-hell-you-will.jpg', '', 'https://i.imgur.com/C1nrsn7.png', 'https://i.imgur.com/WBhpRb7.png', 'https://i.imgur.com/0sX7wTI.png', 'https://i.imgur.com/E2KdG6d.png', 'https://i.imgur.com/YDVySNt.png', 'https://i.imgur.com/oTBgB0M.png', 'https://i.imgur.com/C1nrsn7.png', 'https://i.imgur.com/tCAFemv.png', 'https://i.imgur.com/Rt404tt.png', 'https://i.imgur.com/bnCmlGN.png', 'https://i.imgur.com/Ncmk49X.png', 'https://i.imgur.com/uzkEK9w.png', 'https://i.imgur.com/vjiCmKs.png', 'https://i.imgur.com/WB0Qj7Y.png', 'https://i.imgur.com/PAxxtIc.png']
-        }),
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: 'help',
@@ -356,6 +400,7 @@ weather (plays weather forecast, updated hourly),
 ship (pairs two random users in the chat),
 fortune <zodiac> i.e. q!fortune capricorn (fetches horoscope for today),
 nier (plays a random song from the Nier Automata OST)
+porter (plays a random Porter Robinson song)
 flcl (plays a random song from FlCl)
 radio (post media link to Touhou Radio),
 help (displays this help message)`
@@ -372,7 +417,34 @@ help (displays this help message)`
             }
         })
     ];
-
+    if(['19_58173ede6c2c6', '19_58173ede6c2c6_1'].indexOf(roomn)>-1){
+        MATCH_RULES.push(MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: 'lewd',
+            default_reply: ['http://img03.deviantart.net/5491/i/2012/319/b/7/achievement_unlocked__you_are_a_pervert_by_kitsuneyin-d5l1ica.jpg',
+                            'http://pa1.narvii.com/5961/a6da21c2342e3acf67372b709e839fae4dbd1730_hq.gif',
+                            'https://pics.onsizzle.com/when-vou-encounter-a-prune-faced-old-pervert-you-prune-27357788.png',
+                            'https://i.pinimg.com/736x/7b/2b/37/7b2b3730648ae3b91700c80deff27ba7.jpg',
+                            'http://pre09.deviantart.net/8f76/th/pre/f/2013/014/7/1/achievement_unlocked__you_are_a_pervert_by_kitsuneyin-d5rfjb6.jpg',
+                            'https://cdn.meme.am/cache/instances/folder317/500x/66161317/yoda-pervert-you-are-burn-in-hell-you-will.jpg',
+                            'https://i.imgur.com/C1nrsn7.png',
+                            'https://i.imgur.com/WBhpRb7.png',
+                            'https://i.imgur.com/0sX7wTI.png',
+                            'https://i.imgur.com/E2KdG6d.png',
+                            'https://i.imgur.com/YDVySNt.png',
+                            'https://i.imgur.com/oTBgB0M.png',
+                            'https://i.imgur.com/C1nrsn7.png',
+                            'https://i.imgur.com/tCAFemv.png',
+                            'https://i.imgur.com/Rt404tt.png',
+                            'https://i.imgur.com/bnCmlGN.png',
+                            'https://i.imgur.com/Ncmk49X.png',
+                            'https://i.imgur.com/uzkEK9w.png',
+                            'https://i.imgur.com/vjiCmKs.png',
+                            'https://i.imgur.com/WB0Qj7Y.png',
+                            'https://i.imgur.com/PAxxtIc.png']
+        })
+                        );
+    }
     getcontents = (function() {
         var baseFunc = getcontents;
 
@@ -499,3 +571,4 @@ help (displays this help message)`
         return meiBotData.key;
     }
 })();
+
