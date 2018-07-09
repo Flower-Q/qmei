@@ -418,6 +418,87 @@
         }),
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: ['epicnpc', 'epic npc', 'Epic NPC', 'EPIC NPC'],
+            default_reply: function () {var urls =
+                ['https://www.youtube.com/watch?v=lbJ51AJuR7E',
+                 'https://www.youtube.com/watch?v=Vyw6n1EKlww',
+                 'https://www.youtube.com/watch?v=g6Fgxe2M4C0',
+                 'https://www.youtube.com/watch?v=-vI5tdORhC0',
+                 'https://www.youtube.com/watch?v=2bodhetqm2M',
+                 'https://www.youtube.com/watch?v=SWwToakUCs0',
+                 'https://www.youtube.com/watch?v=gfGt3F7nj6Q',
+                 'https://www.youtube.com/watch?v=em-a3CEchd8',
+                 'https://www.youtube.com/watch?v=8BR31Ox1pck',
+                 'https://www.youtube.com/watch?v=dAo4poYha78',
+                 'https://www.youtube.com/watch?v=0bAFr3lEvgE',
+                 'https://www.youtube.com/watch?v=cP9sEt8Xj6g',
+                 'https://www.youtube.com/watch?v=8Yh35uWLBQ8',
+                 'https://www.youtube.com/watch?v=S7a-_Qu9fac',
+                 'https://www.youtube.com/watch?v=WBhb_bHgiKc',
+                 'https://www.youtube.com/watch?v=zEjNTP6_-9w',
+                 'https://www.youtube.com/watch?v=pjtU8H2ABn8',
+                 'https://www.youtube.com/watch?v=4YtAV_e6Sf8',
+                 'https://www.youtube.com/watch?v=X_uTPURCBM0',
+                 'https://www.youtube.com/watch?v=N62DdK-0-8Q',
+                 'https://www.youtube.com/watch?v=kA11NH4z1MA',
+                 'https://www.youtube.com/watch?v=obAd0zAFMTI',
+                 'https://www.youtube.com/watch?v=b2UPBVCdgB8',
+                 'https://www.youtube.com/watch?v=Qis4KLT5JFs',
+                 'https://www.youtube.com/watch?v=m0fxn3_A5gc',
+                 'https://www.youtube.com/watch?v=SfnSX2Bs3ws',
+                 'https://www.youtube.com/watch?v=DFlaL_EJuto',
+                 'https://www.youtube.com/watch?v=kYxQV1G7vCc',
+                 'https://www.youtube.com/watch?v=AZ442NHQGco',
+                 'https://www.youtube.com/watch?v=MkBKZm1WfYY',
+                 'https://www.youtube.com/watch?v=BcZcaTx2Sb4',
+                 'https://www.youtube.com/watch?v=urcbTWgituM',
+                 'https://www.youtube.com/watch?v=F5oVGL-NVG4',
+                 'https://www.youtube.com/watch?v=_B_15miwvCM',
+                 'https://www.youtube.com/watch?v=I6m-d4zjmSE',
+                 'https://www.youtube.com/watch?v=SpQoP9Gh1MI',
+                 'https://www.youtube.com/watch?v=4vu5Or-3vrI',
+                 'https://www.youtube.com/watch?v=1bqZ8AvF5-8',
+                 'https://www.youtube.com/watch?v=3raNknAKQo8',
+                 'https://www.youtube.com/watch?v=5pRg33UGod0',
+                 'https://www.youtube.com/watch?v=cGbKLax6aOU',
+                 'https://www.youtube.com/watch?v=WnIzMYrmH-8',
+                 'https://www.youtube.com/watch?v=BnqXMJ9fEzY',
+                 'https://www.youtube.com/watch?v=LsYlJAP_HG8',
+                 'https://www.youtube.com/watch?v=UV06wV-5XvU',
+                 'https://www.youtube.com/watch?v=mwgEmQtcB6Q',
+                 'https://www.youtube.com/watch?v=ISvFJw9JMlI',
+                 'https://www.youtube.com/watch?v=by1avpKRcq8',
+                 'https://www.youtube.com/watch?v=Gc-bsbF8rBw',
+                 'https://www.youtube.com/watch?v=3gu0g-6TG-c',
+                 'https://www.youtube.com/watch?v=GSmd_irJJzM',
+                 'https://www.youtube.com/watch?v=i7zqnBEECG0',
+                 'https://www.youtube.com/watch?v=RgxKIu05dKE',
+                 'https://www.youtube.com/watch?v=cyfxqBcLt2o',
+                 'https://www.youtube.com/watch?v=X3nvC20P8wM',
+                 'https://www.youtube.com/watch?v=dT8N5TAGCOQ',
+                 'https://www.youtube.com/watch?v=AGmXPk5MhuU',
+                 'https://www.youtube.com/watch?v=FFHLB9KhnQo',
+                 'https://www.youtube.com/watch?v=Zf4MoLO2yQU',
+                 'https://www.youtube.com/watch?v=JTdGGZrnwbs',
+                 'https://www.youtube.com/watch?v=b0CJNpqeq8g',
+                 'https://www.youtube.com/watch?v=iLwn37ev1Wo',
+                 'https://www.youtube.com/watch?v=iZBWUOe1OZ4',
+                 'https://www.youtube.com/watch?v=3O_A05PDc-M',
+                 'https://www.youtube.com/watch?v=4Ov4uMipyes',
+                 'https://www.youtube.com/watch?v=qZnSEC44SPk',
+                 'https://www.youtube.com/watch?v=B5o0bTz9-iM',
+                 'https://www.youtube.com/watch?v=kqEotf_cR2w',
+                 'https://www.youtube.com/watch?v=vu0W5SdNuis',
+                 'https://www.youtube.com/watch?v=YUvrLBv2zBc',
+                 'https://www.youtube.com/watch?v=uQVNrAUk4lE',
+                 'https://www.youtube.com/watch?v=nf-lhFKPqSM',
+                 'https://www.youtube.com/watch?v=XPRQn0fTJ_I',
+                 'https://www.youtube.com/watch?v=L75iBgLWmvo'];
+                                        inputKeyDown(moveinput,'<> '+urls[RandomInt(urls.length)]);
+                                       }
+        }),
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: ['clickhole', 'Clickhole', 'ClickHole', 'Click Hole'],
             default_reply: function () {var urls =
                 ['https://www.youtube.com/watch?v=kzV2tHk50Qw',
@@ -725,7 +806,9 @@ ghibli (plays a random Studio Ghibli Soundtrack)
 porter (plays a random Porter Robinson song)
 flcl (plays a random song from FlCl)
 toradora (plays a random song from Toradora)
+epicnpc (plays a random episode of Epic NPC Man)
 clickhole (plays a random clickhole video)
+lewd (forces mei to post a lewd image of herself)
 radio (post media link to Touhou Radio),
 help (displays this help message)`
         }),
@@ -768,15 +851,14 @@ help (displays this help message)`
         MATCH_RULES.push(MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: ['Lewd', 'lewd', 'loods', 'lewds', 'Lewds'],
-            default_reply: function () {
-                var urls=['http://img03.deviantart.net/5491/i/2012/319/b/7/achievement_unlocked__you_are_a_pervert_by_kitsuneyin-d5l1ica.jpg',
+            default_reply: ['http://img03.deviantart.net/5491/i/2012/319/b/7/achievement_unlocked__you_are_a_pervert_by_kitsuneyin-d5l1ica.jpg',
                           'http://pa1.narvii.com/5961/a6da21c2342e3acf67372b709e839fae4dbd1730_hq.gif',
                           'https://pics.onsizzle.com/when-vou-encounter-a-prune-faced-old-pervert-you-prune-27357788.png',
                           'https://i.pinimg.com/736x/7b/2b/37/7b2b3730648ae3b91700c80deff27ba7.jpg',
                           'http://pre09.deviantart.net/8f76/th/pre/f/2013/014/7/1/achievement_unlocked__you_are_a_pervert_by_kitsuneyin-d5rfjb6.jpg',
-                          'https://cdn.meme.am/cache/instances/folder317/500x/66161317/yoda-pervert-you-are-burn-in-hell-you-will.jpg'];
-                }
-        }));
+                          'https://cdn.meme.am/cache/instances/folder317/500x/66161317/yoda-pervert-you-are-burn-in-hell-you-will.jpg']
+            }
+        ));
     }
     if (isVidHouse) {
         MATCH_RULES.push(
