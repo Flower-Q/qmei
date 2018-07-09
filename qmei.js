@@ -21,7 +21,7 @@
                 'Ruby': 'Rubeh Rubeh Rubeh!',
                 'Cargo': 'box!',
                 'Aluin': 'shut up bully',
-                'Doll': 'Doll is a mean friend'
+                'Doll': '*pokes*'
             },
             default_reply: null
         }),
@@ -692,6 +692,38 @@
                                         inputKeyDown(moveinput,'<> '+urls[RandomInt(urls.length)]);
                                        }
         }),
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: ['hwndu', 'HWNDU'],
+            end_with_keyword: '1',
+            default_reply: function () {var url ='https://www.youtube.com/watch?v=_p4h3jwJob0'
+            inputKeyDown(moveinput,'<> '+url);
+                                       }
+        }),
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: ['hwndu', 'HWNDU'],
+            end_with_keyword: '2',
+            default_reply: function () {var url ='https://www.youtube.com/watch?v=vw9zyxm860Q'
+            inputKeyDown(moveinput,'<> '+url);
+                                       }
+        }),
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: ['hwndu', 'HWNDU'],
+            end_with_keyword: '3',
+            default_reply: function () {var url ='https://www.youtube.com/watch?v=3aZuj_SDqDo'
+            inputKeyDown(moveinput,'<> '+url);
+                                       }
+        }),
+        MatchRule({
+            begin_with_keyword: [myself + ' &lt;', 'q!'],
+            include_keyword: ['hwndu', 'HWNDU'],
+            end_with_keyword: '4',
+            default_reply: function () {var url ='https://www.youtube.com/watch?v=O_ldHq3NzC0'
+            inputKeyDown(moveinput,'<> '+url);
+                                       }
+        }),
         //fetches hourly weather info for okc from noaa
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
@@ -852,13 +884,13 @@ help (displays this help message)`
             begin_with_keyword: [myself + ' &lt;', 'q!'],
             include_keyword: ['Lewd', 'lewd', 'loods', 'lewds', 'Lewds'],
             default_reply: ['http://img03.deviantart.net/5491/i/2012/319/b/7/achievement_unlocked__you_are_a_pervert_by_kitsuneyin-d5l1ica.jpg',
-                          'http://pa1.narvii.com/5961/a6da21c2342e3acf67372b709e839fae4dbd1730_hq.gif',
-                          'https://pics.onsizzle.com/when-vou-encounter-a-prune-faced-old-pervert-you-prune-27357788.png',
-                          'https://i.pinimg.com/736x/7b/2b/37/7b2b3730648ae3b91700c80deff27ba7.jpg',
-                          'http://pre09.deviantart.net/8f76/th/pre/f/2013/014/7/1/achievement_unlocked__you_are_a_pervert_by_kitsuneyin-d5rfjb6.jpg',
-                          'https://cdn.meme.am/cache/instances/folder317/500x/66161317/yoda-pervert-you-are-burn-in-hell-you-will.jpg']
-            }
-        ));
+                            'http://pa1.narvii.com/5961/a6da21c2342e3acf67372b709e839fae4dbd1730_hq.gif',
+                            'https://pics.onsizzle.com/when-vou-encounter-a-prune-faced-old-pervert-you-prune-27357788.png',
+                            'https://i.pinimg.com/736x/7b/2b/37/7b2b3730648ae3b91700c80deff27ba7.jpg',
+                            'http://pre09.deviantart.net/8f76/th/pre/f/2013/014/7/1/achievement_unlocked__you_are_a_pervert_by_kitsuneyin-d5rfjb6.jpg',
+                            'https://cdn.meme.am/cache/instances/folder317/500x/66161317/yoda-pervert-you-are-burn-in-hell-you-will.jpg']
+        }
+                                  ));
     }
     if (isVidHouse) {
         MATCH_RULES.push(
