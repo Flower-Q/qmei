@@ -5,7 +5,7 @@
 // @description  mei is a cyborg!
 // @author       mei.iirose@pm.me
 // @include      https://iirose.com/messages.html
-// @grant        none
+// @grant        GM.xmlHttpRequest
 // ==/UserScript==
 
 (function() {
@@ -770,8 +770,8 @@
         //fetches horoscope
         MatchRule({
             begin_with_keyword: [myself + ' &lt;', 'q!'],
-            include_keyword: 'fortune',
-            default_reply: 'zodiac not yet available >~<'
+            include_keyword: 'horoscope',
+            default_reply: sendHoroscope
         }),
         //initiates macro to give thief 4 gold,
         MatchRule({
@@ -1105,6 +1105,18 @@ help (displays this help message)`
     function RandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
     };
+    function sendHoroscope(user, message) {
+        var sign = message.split('horoscope')[1].trim();
+        GM.xmlHttpRequest({
+            method: 'GET',
+            // url: 'http://sandipbgt.com/theastrologer/api/horoscope/' + sign.toLowerCase() + '/today'
+            url: 'https://theastrologer-api.herokuapp.com/api/horoscope/' + sign.toLowerCase() + '/today',
+            onload: function (response) {
+                var json = JSON.parse(response.responseText);
+                SendMessage(user + ' < ' + json.sunsign + ':\n' + json.horoscope);
+            }
+        });
+    }
     function getRandomColor() {
         var letters = '0123456789ABCDEF';
         var color = '#';
